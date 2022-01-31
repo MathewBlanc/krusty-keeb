@@ -15,7 +15,7 @@
 #define FUNC 4
 
 &mt {
-    tapping-term-ms = <600>;
+    tapping-term-ms = <1000>;
 };
 
 / {
@@ -24,8 +24,8 @@
 
                 alpha_layer {
                 bindings = <
-   &kp SQT	&kp COMMA	&kp PERIOD	&kp P		&kp Y		&lt FUNC F 	 	&lt MEDIA G	&mt RCTRL C	&kp R		&kp L		&kp SLASH	    &kp BACKSLASH
-   &kp A    	&kp O       	&kp E  		&mt LALT U    	&mt LGUI I 	&lt NAV D   	 	&lt NUMSYM H	&mt RGUI T  	&mt RALT  N	&kp  S  	&kp MINUS	    &kp EQUAL
+   &kp SQT	&kp COMMA	&kp PERIOD	&kp P		&kp Y		&lt FUNC F 	 	&lt MEDIA G	&kp C		&kp R		&kp L		&kp SLASH	    &kp BACKSLASH
+   &kp A    	&kp O       	&mt LCTRL E  	&mt LALT U    	&mt LGUI I 	&lt NAV D   	 	&lt NUMSYM H	&mt RGUI T  	&mt RALT  N	&mt RCTRL  S  	&kp MINUS	    &kp EQUAL
    &kp LSHIFT 	&kp SEMI 	&kp Q 		&kp J 		&kp K 		&lt NUMSYM X   	 	&kp B 		&kp M  		&kp W 		&kp V 		&kp Z 		    &kp ENTER
                   				&kp GRAVE 	&kp BSPC 	&kp TAB   		&to NUMSYM 	&kp SPACE 	&kp F20
                 >;
