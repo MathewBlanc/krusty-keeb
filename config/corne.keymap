@@ -19,32 +19,41 @@
 };
 
 / {
-        keymap {
+    combos {
+        compatible = "zmk,combos";
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <37 38>;
+            bindings = <&kp DEL>;
+        };
+    };
+    
+    keymap {
                 compatible = "zmk,keymap";
 
                 alpha_layer {
                 bindings = <
-   &kp SQT	&kp COMMA	&kp PERIOD	&kp P			&mt LCTRL Y		&lt FUNC F			&lt NUMSYM G	&mt RCTRL C	&kp R			&kp L		&kp SLASH	    &kp BACKSLASH
-   &kp A    &kp O       &mt LALT E  &mt LSHIFT U    &mt LGUI I 		&lt NAV D   		&lt MEDIA H 	&mt RGUI T  &mt RSHIFT N	&mt RALT S  &kp MINUS	    &kp EQUAL
-   &kp F20 	&kp SEMI 	&kp Q 		&kp J 			&kp K 			&lt NUMSYM X   		&kp B 			&kp M  		&kp W 			&kp V 		&kp Z 		    &kp ENTER
-                  					&kp GRAVE 		&kp BSPC 		&kp TAB   			&to NUMSYM 		&kp SPACE 	&kp DEL
+   &kp SQT	&kp COMMA	&kp PERIOD	&kp P		&kp Y		&lt FUNC F 	 	&lt MEDIA G	&mt RCTRL C	&kp R		&kp L		&kp SLASH	    &kp BACKSLASH
+   &kp A    	&kp O       	&kp E  		&mt LALT U    	&mt LGUI I 	&lt NAV D   	 	&lt NUMSYM H	&mt RGUI T  	&mt RALT  N	&kp  S  	&kp MINUS	    &kp EQUAL
+   &kp LSHIFT 	&kp SEMI 	&kp Q 		&kp J 		&kp K 		&lt NUMSYM X   	 	&kp B 		&kp M  		&kp W 		&kp V 		&kp Z 		    &kp ENTER
+                  				&kp GRAVE 	&kp BSPC 	&kp TAB   		&to NUMSYM 	&kp SPACE 	&kp F20
                 >;
                 };
 				
                 numsym_layer {
                 bindings = <
-   &kp EXCL &kp AT 		&kp HASH 	&kp DOLLAR 		&kp PERCENT 	&kp CARET    		&trans   		&kp KP_N7   &kp KP_N8 		&kp KP_N9	&kp KP_PLUS		&kp KP_MINUS 
-   &kp AMPS &kp STAR 	&kp LPAR 	&kp RPAR 		&kp LBRC 		&kp RBRC        	&kp KP_DOT 		&kp KP_N4 	&kp KP_N5 		&kp KP_N6 	&kp KP_MULTIPLY &kp KP_DIVIDE
-   &none  	&none  		&kp LBKT  	&kp RBKT  		&none 			&trans              &kp KP_N0   	&kp KP_N1   &kp KP_N2 			&kp KP_N3   &kp KP_EQUAL	&trans
-                          	        &none       &kp BSPC    &to ALPHA        &to NAV     &kp SPACE       &trans
+   &kp EXCL 	&kp AT 		&kp HASH 	&kp DOLLAR 	&kp PERCENT 	&kp CARET    		&trans   	&kp KP_N7   	&kp KP_N8 	&kp KP_N9	&kp KP_PLUS	&kp KP_MINUS 
+   &kp AMPS 	&kp STAR 	&kp LPAR 	&kp RPAR 	&kp LBRC 	&kp RBRC        	&kp KP_DOT 	&kp KP_N4 	&kp KP_N5 	&kp KP_N6 	&kp KP_MULTIPLY &kp KP_DIVIDE
+   &none  	&none  		&kp LBKT  	&kp RBKT  	&none 		&trans          	&kp KP_N0   	&kp KP_N1   	&kp KP_N2 	&kp KP_N3	&kp KP_EQUAL	&trans
+                          	        	&none       	&kp BSPC    	&to ALPHA        	&to NAV     	&kp SPACE       &trans
                         >;
                 };
                 nav_layer {
                  bindings = <
-   &none    &none       &none       &none           &none           &none               &none           &none       &kp UP          &none       &none           &kp HOME
-   &none    &none       &kp LALT    &kp LSHIFT      &kp LGUI        &trans              &none           &kp LEFT    &kp DOWN        &kp RIGHT   &none           &none
-   &none    &none       &none       &none           &none           &none               &none           &kp K_CUT   &kp K_COPY      &kp K_PASTE &none           &kp END
-                    	            &none           &kp BSPC	    &to ALPHA           &to MEDIA       &kp SPACE   &trans
+   &none    	&none       	&none       	&none           &none           &none               	&none           &none       	&kp UP          &none       	&none           &kp HOME
+   &none    	&none       	&none	    	&kp LALT	&kp LGUI        &trans              	&none           &kp LEFT    	&kp DOWN        &kp RIGHT   	&none           &none
+   &none    	&none       	&none       	&none           &none           &none               	&none           &kp K_CUT   	&kp K_COPY      &kp K_PASTE 	&none           &kp END
+                    	            		&none           &kp BSPC	&to ALPHA           	&to MEDIA       &kp SPACE   	&trans
                         >;
                 };
                 media_layer {
@@ -59,7 +68,7 @@
                 bindings = <
    &none &none &none &none &none &trans     &none &kp F7 &kp F8 &kp F9 &kp F10 &kp F12
    &none &none &none &none &none &none      &none &kp F4 &kp F5 &kp F6 &kp F11 &kp F13
-   &none &none &none &none &none &none      &none &kp F1 &kp F2 &kp F3 &kp F14 &kp F15
+   &none &none &none &none &none &none      &none &kp F1 &kp F2 &kp F3 &kp F14 &kp LG(LS(N4)
                &none &kp BSPC   &to ALPHA   &none    &kp SPACE   &trans
                         >;
                 };
