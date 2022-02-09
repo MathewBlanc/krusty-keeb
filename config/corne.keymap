@@ -31,6 +31,11 @@
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp ENTER>;
+        };	
+	combo_del {
+            timeout-ms = <50>;
+            key-positions = <36 37>;
+   	    bindings = <&kp DEL>;
         };
 	combo_copy {
             timeout-ms = <50>;
@@ -66,6 +71,16 @@
             timeout-ms = <50>;
             key-positions = <21 22>;
             bindings = <&kp RIGHT>;
+        };	
+	combo_home {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp HOME>;
+        };	
+	combo_end {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp END>;
         };
     };
     
@@ -99,8 +114,8 @@
                 };
                 media_layer {
                 bindings = <
-   &kp K_PREV   &kp K_PP    &kp K_NEXT      &none   &none   &kp ESC         &none       &none       &none   &none   &none   &none
-   &kp K_VOL_DN &kp K_MUTE  &kp K_VOL_UP    &none   &none   &none           &trans      &none       &none   &none   &none   &none
+   &kp C_PREV   &kp C_PP    &kp C_NEXT      &none   &none   &kp ESC         &none       &none       &none   &none   &none   &none
+   &kp C_VOL_DN &kp K_MUTE  &kp C_VOL_UP    &none   &none   &none           &trans      &none       &none   &none   &none   &none
    &none        &none       &none           &none   &none   &none           &none       &none       &none   &none   &none   &none
                     	    &none           &kp BSPC   &to ALPHA            &to FUNC    &kp SPACE   &trans
                         >;
