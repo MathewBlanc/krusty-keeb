@@ -16,26 +16,61 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <400>;
+    tapping-term-ms = <300>;
 };
 
 / {
     combos {
         compatible = "zmk,combos";
-        combo_ret {
+        combo_ret1 {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp ENTER>;
+        };
+	combo_ret2 {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp ENTER>;
+        };
+	combo_ret2 {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp ENTER>;
+        };
+	combo_copy {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp LG(C)>;
         };
-	combo_del {
+	combo_paste {
             timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&kp DEL>;
+            key-positions = <3 4>;
+            bindings = <&kp LG(V)>;
+        };	
+	combo_cut {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&kp LG(X)>;
         };
-	combo_enter {
+	combo_up {
             timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp ENTER>;
+            key-positions = <8 9>;
+            bindings = <&kp UP>;
+        };	
+	combo_down {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp DOWN>;
+        };	
+	combo_left {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp LEFT>;
+        };	
+	combo_right {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp RIGHT>;
         };
     };
     
@@ -63,7 +98,7 @@
                  bindings = <
    &none    	&none       	&none       	&none           &none           &none               	&none           &none       	&kp UP          &none       	&none           &kp HOME
    &none    	&none       	&none	    	&kp LALT	&kp LGUI        &trans              	&none           &kp LEFT    	&kp DOWN        &kp RIGHT   	&none           &none
-   &none    	&none       	&none       	&none           &none           &none               	&none           &kp K_CUT   	&kp K_COPY      &kp K_PASTE 	&none           &kp END
+   &none    	&none       	&none       	&none           &none           &none               	&none           &none   	&none      	&none 		&none           &kp END
                     	            		&none           &kp BSPC	&to ALPHA           	&to MEDIA       &kp SPACE   	&trans
                         >;
                 };
