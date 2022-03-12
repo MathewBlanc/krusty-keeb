@@ -82,6 +82,38 @@
             key-positions = <22 23>;
             bindings = <&kp END>;
         };
+	combo_word_up {
+            timeout-ms = <50>;
+            key-positions = <13 10 11>;
+            bindings = <&kp LA(LEFT)>;
+        };
+	combo_word_down {
+            timeout-ms = <50>;
+            key-positions = <13 22 23>;
+            bindings = <&kp LA(RIGHT)>;
+        };
+	combo_e_accent {
+            timeout-ms = <50>;
+            key-positions = <2 14>;
+            bindings = <&kp LA(E)>;
+        };	
+	combo_n_accent {
+            timeout-ms = <50>;
+            key-positions = <8 20>;
+            bindings = <&kp LA(N)>;
+        };
+    };
+    
+        behaviors {
+        sh: homerow_shifts {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
     };
     
     keymap {
@@ -89,10 +121,10 @@
 
                 alpha_layer {
                 bindings = <
-   &kp SQT	&kp COMMA	&kp PERIOD	&mt LSHIFT P	&mt LCTRL Y	&lt FUNC F 	 	&lt MEDIA G	&mt RCTRL  C	&mt RSHIFT R	&kp L		&kp SLASH	    &kp BACKSLASH
-   &kp A    	&kp O       	&mt LALT E  	&mt LGUI U    	&kp I 		&lt NAV D   	 	&lt NUMSYM H	&kp T  		&mt RGUI  N	&mt RALT  S  	&kp MINUS	    &kp EQUAL
-   &kp LSHIFT 	&kp SEMI 	&kp Q 		&kp J 		&kp K 		&lt NUMSYM X   	 	&kp B 		&kp M  		&kp W 		&kp V 		&kp Z 		    &kp ENTER
-                  				&kp GRAVE 	&kp BSPC 	&kp TAB   		&to NUMSYM 	&kp SPACE 	&kp F20
+   &kp SQT	&kp COMMA	&kp PERIOD	&kp  P		&mt LCTRL Y	&lt FUNC F 	 	&lt MEDIA G	&mt RCTRL  C	&kp R		&kp L		&kp SLASH	    &kp BACKSLASH
+   &kp A    	&kp O       	&mt LALT E  	&mt LGUI U    	&lt NAV I 	&sh LSHIFT D   	 	&sh RSHIFT H	&kp T  		&mt RGUI  N	&mt RALT  S  	&kp MINUS	    &kp EQUAL
+   &sk LSHIFT 	&kp SEMI 	&kp Q 		&kp J 		&kp K 		&lt NUMSYM X   	 	&lt NUMSYM B 	&kp M  		&kp W 		&kp V 		&kp Z 		    &kp ENTER
+                  				&kp GRAVE 	&kp BSPC 	&kp TAB   		&to NUMSYM 	&kp SPACE 	&kp F15
                 >;
                 };
 				
