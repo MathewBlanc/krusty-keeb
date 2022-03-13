@@ -124,7 +124,7 @@
    &kp SQT	&kp COMMA	&kp PERIOD	&kp  P		&mt LCTRL Y	&lt FUNC F 	 	&lt MEDIA G	&mt RCTRL  C	&kp R		&kp L		&kp SLASH	    &kp BACKSLASH
    &kp A    	&kp O       	&mt LALT E  	&mt LGUI U    	&lt NAV I 	&sh LSHIFT D   	 	&sh RSHIFT H	&kp T  		&mt RGUI  N	&mt RALT  S  	&kp MINUS	    &kp EQUAL
    &sk LSHIFT 	&kp SEMI 	&kp Q 		&kp J 		&kp K 		&lt NUMSYM X   	 	&lt NUMSYM B 	&kp M  		&kp W 		&kp V 		&kp Z 		    &kp ENTER
-                  				&kp GRAVE 	&kp BSPC 	&kp TAB   		&to NUMSYM 	&kp SPACE 	&kp F15
+                  				&kp GRAVE 	&kp BSPC 	&kp TAB   		&to NUMSYM 	&kp SPACE 	&kp Y
                 >;
                 };
 				
