@@ -75,12 +75,12 @@
 	combo_word_up {
             timeout-ms = <50>;
             key-positions = <10 11>;
-            bindings = <&kp LA(RIGHT)>;
+            bindings = <&kp LA(LEFT)>;
         };	
 	combo_word_down {
             timeout-ms = <50>;
             key-positions = <22 23>;
-            bindings = <&kp LA(LEFT)>;
+            bindings = <&kp LA(RIGHT)>;
         };
 	combo_e_accent {
             timeout-ms = <50>;
