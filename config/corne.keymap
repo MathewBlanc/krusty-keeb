@@ -106,12 +106,12 @@
 	combo_o_accent {
             timeout-ms = <50>;
             key-positions = <1 13>;
-            bindings = <&accent_n>;
+            bindings = <&accent_o>;
         };
 	combo_u_accent {
             timeout-ms = <50>;
             key-positions = <3 15>;
-            bindings = <&accent_n>;
+            bindings = <&accent_u>;
         };
     };
     
