@@ -203,7 +203,7 @@
                 bindings = <
    &kp SQT		&kp COMMA	&kp PERIOD    	&kp P         	&mt LCTRL Y	&lt FUNC F          	&lt MEDIA G    	&mt RCTRL C	&kp R         	&kp L		&kp SLASH	&kp BACKSLASH
    &kp A		&kp O		&mt LALT E    	&mt LGUI U    	&lt NAV I 	&lt NUMSYM D   	 	&lt NUMSYM H	&kp T		&mt RGUI  N	&mt RALT  S	&kp MINUS	&kp EQUAL
-   &sk LSHIFT		&kp SEMI 	&kp Q 		&kp J 		&lt NUMPAD K 	&sh LSHIFT X   	 	&sh RSHIFT B 	&kp M  		&kp W		&kp V		&kp Z		&sk RSHIFT
+   &sk LSHIFT		&kp SEMI 	&kp Q 		&kp J 		&lt NUMPAD K 	&sh LSHIFT X   	 	&sh RSHIFT B 	&kp M  		&kp W		&kp V		&kp Z		&kp ESC
                   				        &kp GRAVE 	&kp BSPC 	&kp TAB			&to NUMSYM	&kp SPACE 	&kp F20
                 	>;
                 };
